@@ -1,13 +1,17 @@
 ﻿<#
-    # Initial setup notes
+    .SYNOPSIS
+    Custom PowerShell profile and workstation configuration.
 
-    ## Open profiles in VSCode
-    @(
-        $PROFILE.AllUsersAllHosts,
-        $PROFILE.AllUsersCurrentHost,
-        $PROFILE.CurrentUserAllHosts,
-        $PROFILE.CurrentUserCurrentHost
-    ) | Foreach-object {code -add $_}
+    Author: Connor Carnes
+
+    .NOTES
+    There are four default PowerShell profile locations (listed below). Copy the contents of this file to the file located at $Profile.AllUsersAllHosts.
+    Create the file if it doesn't exist. For the other locations, confirm the file does not exist or is empty. This will ensure that the profile is loaded from the AllUsersAllHosts location.
+
+    $Profile.AllUsersAllHosts
+    $Profile.AllUsersCurrentHost
+    $Profile.CurrentUserAllHosts
+    $Profile.CurrentUserCurrentHost
 
     ## Modules
     Install-Module -Name PowerShellGet -Force ; exit
